@@ -1,0 +1,8 @@
+.banner{
+    background-image: url(../../Photo/laptop.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    height: 91.4vh;
+}

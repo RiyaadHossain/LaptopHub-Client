@@ -2,10 +2,11 @@
     font-size: 18px;
     font-weight: 500;
     margin-left: 20px;
+    color: white;
 }
 .active-link{
     font-size: 18px;
     font-weight: 500;
     margin-left: 20px;
-    color: rgb(84, 180, 207);
+    color: rgb(10, 116, 198);
 }
