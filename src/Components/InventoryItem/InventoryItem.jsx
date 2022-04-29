@@ -10,7 +10,7 @@ const InventoryItem = () => {
       .then((json) => setItems(json));
   }, [setItems]);
   return (
-    <div className="bg-black">
+    <div className="bg-[#0b0b0b]">
       <div className="container mx-auto py-16">
         <h1 className="text-3xl font-bold text-center mb-16 text-white">
          
