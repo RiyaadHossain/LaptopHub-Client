@@ -7,6 +7,7 @@ import Inventory from "./Components/Inventory/Inventory";
 import Navbar from "./Components/Navbar/Navbar";
 import InventoryDetails from "./Components/InvetoryDetails/InvetoryDetails";
 import RequireAuth from "./Components/RequireAuth/RequireAuth";
+import AddItem from "./Components/AddItem/AddItem";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
           }
         />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/additem" element={<AddItem />} />
       </Routes>
       <Footer />
     </div>

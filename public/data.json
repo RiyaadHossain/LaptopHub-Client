@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Laptop",
+    "image": "https://i.ibb.co/4Pn8pQN/laptop1.jpg",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis optio excepturi. Sapiente, sit sed?",
+    "price": 210,
+    "quantity": 3,
+    "supplierName": "Alex Jem"
+  },
+  {
+    "name": "Laptop",
+    "image": "https://i.ibb.co/4Pn8pQN/laptop1.jpg",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis optio excepturi. Sapiente, sit sed?",
+    "price": 210,
+    "quantity": 3,
+    "supplierName": "Alex Jem"
+  },
+  {
+    "name": "Laptop",
+    "image": "https://i.ibb.co/4Pn8pQN/laptop1.jpg",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis optio excepturi. Sapiente, sit sed?",
+    "price": 210,
+    "quantity": 3,
+    "supplierName": "Alex Jem"
+  },
+  {
+    "name": "Laptop",
+    "image": "https://i.ibb.co/4Pn8pQN/laptop1.jpg",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis optio excepturi. Sapiente, sit sed?",
+    "price": 210,
+    "quantity": 3,
+    "supplierName": "Alex Jem"
+  },
+  {
+    "name": "Laptop",
+    "image": "https://i.ibb.co/4Pn8pQN/laptop1.jpg",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis optio excepturi. Sapiente, sit sed?",
+    "price": 210,
+    "quantity": 3,
+    "supplierName": "Alex Jem"
+  },
+  {
+    "name": "Laptop",
+    "image": "https://i.ibb.co/4Pn8pQN/laptop1.jpg",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis optio excepturi. Sapiente, sit sed?",
+    "price": 210,
+    "quantity": 3,
+    "supplierName": "Alex Jem"
+  }
+]
