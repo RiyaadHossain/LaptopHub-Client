@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="bg-black">
       <div className="flex container mx-auto h-20 items-center justify-between">
         <div className="logo">
-          <h2 onClick={() => navigate('/')} className="text-2xl font-bold text-white">Laptop</h2>
+          <h2 onClick={() => navigate('/')} className="text-2xl font-bold text-white">Laptop Hub</h2>
         </div>
         <div className="nav-link">
           <NavLink
@@ -29,6 +29,9 @@ const Navbar = () => {
           >
             Blogs
           </NavLink>
+        </div>
+        <div>
+          <button onClick={() => navigate('/login')} className="bg-blue-500 py-[7px] shadow shadow-blue-500 px-7 rounded-md text-lg font-semibold text-white">Log In</button>
         </div>
       </div>
     </nav>

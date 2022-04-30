@@ -5,9 +5,11 @@ import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import Inventory from "./Components/Inventory/Inventory";
 import Navbar from "./Components/Navbar/Navbar";
-import InventoryDetails from "./Components/InvetoryDetails/InvetoryDetails";
+import ItemDetails from "./Components/ItemDetails/ItemDetails";
 import RequireAuth from "./Components/RequireAuth/RequireAuth";
 import AddItem from "./Components/AddItem/AddItem";
+import LogIn from "./Components/Auth/LogIn/LogIn";
+import SignUp from "./Components/Auth/SignUp/SignUp";
 
 function App() {
   return (
@@ -17,15 +19,17 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/inventory" element={<Inventory />} />
         <Route
-          path="/inventory/:id"
+          path="/itemdetails/:id"
           element={
             <RequireAuth>
-              <InventoryDetails />
+              <ItemDetails />
             </RequireAuth>
           }
         />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/additem" element={<AddItem />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
       <Footer />
     </div>

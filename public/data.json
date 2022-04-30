@@ -1,50 +1,50 @@
 [
   {
-    "name": "Laptop",
-    "image": "https://i.ibb.co/4Pn8pQN/laptop1.jpg",
+    "name": "Apple",
+    "image": "https://i.ibb.co/mJPbtMw/Apple.jpg",
     "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis optio excepturi. Sapiente, sit sed?",
     "price": 210,
-    "quantity": 3,
-    "supplierName": "Alex Jem"
+    "quantity": 200,
+    "supplierName": "Justin Trudo"
   },
   {
-    "name": "Laptop",
-    "image": "https://i.ibb.co/4Pn8pQN/laptop1.jpg",
+    "name": "Asus",
+    "image": "https://i.ibb.co/8bSn6Q5/Asus.jpg",
     "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis optio excepturi. Sapiente, sit sed?",
     "price": 210,
-    "quantity": 3,
-    "supplierName": "Alex Jem"
+    "quantity": 100,
+    "supplierName": "Emmanuel Macron"
   },
   {
-    "name": "Laptop",
-    "image": "https://i.ibb.co/4Pn8pQN/laptop1.jpg",
+    "name": "HP",
+    "image": "https://i.ibb.co/NjrJPqk/HP.jpg",
     "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis optio excepturi. Sapiente, sit sed?",
     "price": 210,
-    "quantity": 3,
-    "supplierName": "Alex Jem"
+    "quantity": 150,
+    "supplierName": "Angela Dorothea"
   },
   {
-    "name": "Laptop",
-    "image": "https://i.ibb.co/4Pn8pQN/laptop1.jpg",
+    "name": "Huwaei",
+    "image": "https://i.ibb.co/RhL6SHW/Huawei.jpg",
     "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis optio excepturi. Sapiente, sit sed?",
     "price": 210,
-    "quantity": 3,
-    "supplierName": "Alex Jem"
+    "quantity": 120,
+    "supplierName": "Xi Jinping"
   },
   {
-    "name": "Laptop",
-    "image": "https://i.ibb.co/4Pn8pQN/laptop1.jpg",
+    "name": "Lenovo",
+    "image": "https://i.ibb.co/Tmhq2hv/Lenovo.jpg",
     "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis optio excepturi. Sapiente, sit sed?",
     "price": 210,
-    "quantity": 3,
-    "supplierName": "Alex Jem"
+    "quantity": 200,
+    "supplierName": "Joe Biden"
   },
   {
-    "name": "Laptop",
-    "image": "https://i.ibb.co/4Pn8pQN/laptop1.jpg",
+    "name": "Acer",
+    "image": "https://i.ibb.co/L8316Wc/Acer.jpg",
     "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est facilis optio excepturi. Sapiente, sit sed?",
-    "price": 210,
-    "quantity": 3,
-    "supplierName": "Alex Jem"
+    "price": 250,
+    "quantity": 250,
+    "supplierName": "Jhon Boris"
   }
 ]
