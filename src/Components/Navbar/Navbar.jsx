@@ -13,7 +13,7 @@ const Navbar = () => {
   };
   return (
     <nav className="bg-black">
-      <div className="flex container mx-auto h-20 items-center justify-between">
+      <div className="flex flex-col lg:flex-row container mx-auto h-20 items-center justify-between py-6">
         <div className="logo">
           <h2
             onClick={() => navigate("/")}
@@ -22,7 +22,7 @@ const Navbar = () => {
             Laptop Hub
           </h2>
         </div>
-        <div className="nav-link">
+        <div className="nav-link lg:my-0 my-6">
           <NavLink
             className={({ isActive }) => (isActive ? "active-link" : "link")}
             to="/"
@@ -44,12 +44,19 @@ const Navbar = () => {
         </div>
         <div>
           {user ? (
-            <button
-              onClick={logOut}
-              className="bg-blue-500 py-[7px] shadow shadow-blue-500 px-7 rounded-md text-lg font-semibold text-white"
-            >
-              Log Out
-            </button>
+            <div className="flex items-center">
+              <div>
+                <NavLink to='' className="text-white ml-4 font-semibold">Manage Items</NavLink>
+                <NavLink to='' className="text-white ml-4 font-semibold">Add Item</NavLink>
+                <NavLink to='' className="text-white ml-4 font-semibold">My Items</NavLink>
+              </div>
+              <button
+                onClick={logOut}
+                className="ml-5 bg-blue-500 py-[7px] shadow shadow-blue-500 px-7 rounded-md text-lg font-semibold text-white"
+              >
+                Log Out
+              </button>
+            </div>
           ) : (
             <button
               onClick={() => navigate("/login")}

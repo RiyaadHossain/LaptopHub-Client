@@ -6,10 +6,11 @@ import Home from "./Components/Home/Home";
 import Inventory from "./Components/Inventory/Inventory";
 import Navbar from "./Components/Navbar/Navbar";
 import ItemDetails from "./Components/ItemDetails/ItemDetails";
-import RequireAuth from "./Components/RequireAuth/RequireAuth";
+
 import AddItem from "./Components/AddItem/AddItem";
 import LogIn from "./Components/Auth/LogIn/LogIn";
 import SignUp from "./Components/Auth/SignUp/SignUp";
+import RequireAuth from "./Components/RequireAuth/RequireAuth";
 
 function App() {
   return (

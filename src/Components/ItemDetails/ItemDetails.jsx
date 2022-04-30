@@ -7,7 +7,7 @@ const ItemDetails = ({ id }) => {
       .then(res => res.json())
       .then(data => setItem(data))
   }, []);
-  return <div></div>;
+  return <div className="h-[80vh] bg-[#070707]"></div>;
 };
 
 export default ItemDetails;
