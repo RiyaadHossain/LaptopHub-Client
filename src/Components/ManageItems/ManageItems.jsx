@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AddItem = () => {
+const ManageItems = () => {
     return (
         <div className='h-[75vh] bg-black'>
             
@@ -8,4 +8,4 @@ const AddItem = () => {
     );
 };
 
-export default AddItem;
+export default ManageItems;

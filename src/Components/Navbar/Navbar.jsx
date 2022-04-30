@@ -13,7 +13,7 @@ const Navbar = () => {
   };
   return (
     <nav className="bg-black">
-      <div className="flex flex-col lg:flex-row container mx-auto h-20 items-center justify-between py-6">
+      <div className="flex flex-col lg:flex-row container mx-auto lg:h-20 items-center justify-between py-6">
         <div className="logo">
           <h2
             onClick={() => navigate("/")}
@@ -46,9 +46,9 @@ const Navbar = () => {
           {user ? (
             <div className="flex items-center">
               <div>
-                <NavLink to='' className="text-white ml-4 font-semibold">Manage Items</NavLink>
-                <NavLink to='' className="text-white ml-4 font-semibold">Add Item</NavLink>
-                <NavLink to='' className="text-white ml-4 font-semibold">My Items</NavLink>
+                <NavLink to='/manageitems' className="text-white ml-4 font-semibold">Manage Items</NavLink>
+                <NavLink to='/additem' className="text-white ml-4 font-semibold">Add Item</NavLink>
+                <NavLink to='myitems' className="text-white ml-4 font-semibold">My Items</NavLink>
               </div>
               <button
                 onClick={logOut}

@@ -16,8 +16,8 @@ const LogIn = () => {
 
   
   return (
-    <div className="h-[90vh] bg-[#060606]">
-      <h1 className="text-3xl mb-7 pt-20 font-bold text-center text-white">
+    <div className="h-[80vh] lg:h-[90vh] bg-[#060606]">
+      <h1 className="text-3xl mb-7 pt-16 font-bold text-center text-white">
         Log In
       </h1>
       <div className="bg-slate-200 w-[500px] mx-auto py-12 px-3 rounded">
