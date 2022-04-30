@@ -1,6 +1,7 @@
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import toast from "react-hot-toast";
 import { NavLink, useNavigate } from "react-router-dom";
 import auth from "../../Firebase/Firebase.init";
 import "./Navbar.css";
@@ -8,8 +9,10 @@ import "./Navbar.css";
 const Navbar = () => {
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
+  
   const logOut = () => {
     signOut(auth);
+    toast.success('Logged Out', {id:'test1'})
   };
   return (
     <nav className="bg-black">
@@ -43,12 +46,33 @@ const Navbar = () => {
           </NavLink>
         </div>
         <div>
-          {user ? (
+          {user?.emailVerified ? (
             <div className="flex items-center">
               <div>
-                <NavLink to='/manageitems' className="text-white ml-4 font-semibold">Manage Items</NavLink>
-                <NavLink to='/additem' className="text-white ml-4 font-semibold">Add Item</NavLink>
-                <NavLink to='myitems' className="text-white ml-4 font-semibold">My Items</NavLink>
+                <NavLink
+                  to="/manageitems"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : "link"
+                  }
+                >
+                  Manage Items
+                </NavLink>
+                <NavLink
+                  to="/additem"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : "link"
+                  }
+                >
+                  Add Item
+                </NavLink>
+                <NavLink
+                  to="myitems"
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : "link"
+                  }
+                >
+                  My Items
+                </NavLink>
               </div>
               <button
                 onClick={logOut}

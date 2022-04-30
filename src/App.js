@@ -13,11 +13,13 @@ import SignUp from "./Components/Auth/SignUp/SignUp";
 import RequireAuth from "./Components/RequireAuth/RequireAuth";
 import ManageItems from "./Components/ManageItems/ManageItems";
 import MyItems from "./Components/MyItems/MyItems";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <div>
       <Navbar />
+      <Toaster/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/inventory" element={<Inventory />} />
