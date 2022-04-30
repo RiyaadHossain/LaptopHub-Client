@@ -1,7 +1,10 @@
 import React from "react";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
+import auth from "../../../Firebase/Firebase.init";
 
 const LogIn = () => {
+  const [signInWithGoogle] = useSignInWithGoogle(auth);
   let navigate = useNavigate();
   let location = useLocation();
   let from = location.state?.from?.pathname || "/";
@@ -11,6 +14,9 @@ const LogIn = () => {
     e.preventDefault();
   };
 
+  const googleLogIn = () => {
+    signInWithGoogle()
+  }
   return (
     <div className="h-[90vh] bg-[#060606]">
       <h1 className="text-3xl mb-7 pt-20 font-bold text-center text-white">
@@ -47,9 +53,9 @@ const LogIn = () => {
         </div>
       </div>
       <div className="text-center">
-        <button className="bg-slate-200 border-[3px] border-blue-500 mt-10 text-center w-[500px] mx-auto rounded">
+        <button onClick={googleLogIn} className="bg-slate-200 border-[3px] border-blue-500 mt-10 text-center w-[500px] mx-auto rounded">
           <h2 className="py-3 text-2xl font-semibold pl-3">
-            Log In with <span className="text-blue-500"> G</span>
+            Continue with <span className="text-blue-500"> G</span>
             <span className="text-red-400">o</span>
             <span className="text-yellow-500">o</span>
             <span className="text-blue-500">g</span>
