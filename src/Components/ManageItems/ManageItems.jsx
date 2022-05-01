@@ -5,7 +5,7 @@ import { AiFillDelete } from "react-icons/ai";
 const ManageItems = () => {
     const [items, setItems] = useState([]);
     const [isChange, setIsChange] = useState(false)
-    useEffect(() => {
+  useEffect(() => {
       fetch("http://localhost:4000/laptops")
         .then((res) => res.json())
         .then((data) => setItems(data));
@@ -18,7 +18,7 @@ const ManageItems = () => {
         .then(() => { setIsChange(!isChange)});
     };
     return (
-        <div className="py-16 bg-black">
+        <div className="py-16 min-h-[80vh] bg-black">
       <div className=" container mx-auto">
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">

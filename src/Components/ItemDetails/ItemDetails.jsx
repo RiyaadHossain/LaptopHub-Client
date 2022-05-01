@@ -31,6 +31,7 @@ const ItemDetails = () => {
   const updateStock = e => {
     e.preventDefault()
     const quantity = parseInt(e.target.quantity.value) + parseInt(item.quantity)
+    e.target.reset()
     fetch(`http://localhost:4000/laptopQuantityUpdate/${id}`, {
       method: "PUT",
       body: JSON.stringify({

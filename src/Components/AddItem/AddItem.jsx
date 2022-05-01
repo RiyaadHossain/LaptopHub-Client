@@ -1,24 +1,24 @@
 import React from "react";
 
 const AddItem = () => {
-    const addLaptop = (e) => {
-        e.preventDefault();
-        const brandName = e.target.brandName.value
-        const quantity = e.target.quantity.value
-        const price = e.target.price.value
-        const supplierName = e.target.supplierName.value
-        const description = e.target.description.value
-        const imageURL = e.target.image.value
-        console.log(brandName, quantity, price, supplierName, description, imageURL);
+  const addLaptop = (e) => {
+    e.preventDefault();
+    const brandName = e.target.brandName.value;
+    const quantity = e.target.quantity.value;
+    const price = e.target.price.value;
+    const supplierName = e.target.supplierName.value;
+    const description = e.target.description.value;
+    const imageURL = e.target.image.value;
+    e.target.reset();
     fetch("http://localhost:4000/laptop", {
       method: "POST",
       body: JSON.stringify({
-        name : brandName,
-        quantity : quantity,
-        price : price,
-        supplierName : supplierName,
-        description : description,
-        image : imageURL,
+        name: brandName,
+        quantity: quantity,
+        price: price,
+        supplierName: supplierName,
+        description: description,
+        image: imageURL,
       }),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
