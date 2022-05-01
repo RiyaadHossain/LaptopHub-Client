@@ -11,13 +11,16 @@ const ManageItems = () => {
       .then((data) => setItems(data));
   }, [isChange]);
   const deleteItem = (id) => {
-    fetch(`http://localhost:4000/laptop/${id}`, {
-      method: "DELETE",
-    })
-      .then((response) => response.json())
-      .then(() => {
-        setIsChange(!isChange);
-      });
+    const confirm = window.confirm()
+    if (confirm) {
+      fetch(`http://localhost:4000/laptop/${id}`, {
+        method: "DELETE",
+      })
+        .then((response) => response.json())
+        .then(() => {
+          setIsChange(!isChange);
+        });
+    }
   };
   return (
     <div className="py-16 min-h-[80vh] bg-black">
