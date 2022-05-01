@@ -5,7 +5,7 @@ import Client3 from "../../Photo/person3.jpg";
 
 const OurClient = () => {
   return (
-    <div className="bg-[black] py-12">
+    <div className="bg-[#0b0b0b] py-28">
       <h1 className="text-white text-4xl font-semibold text-center">Our Clients</h1>
       <div className="container gap-11 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-[90px]">
         <div className="border relative text-center rounded-md bg-[#0e0d0d] py-6 px-2">

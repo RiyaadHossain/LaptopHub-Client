@@ -3,7 +3,7 @@ import ContactPic from '../../Photo/ContactUs.svg'
 
 const ContactUs = () => {
     return (
-        <div className='bg-[#0b0b0b] py-44'>
+        <div className='bg-[black] py-28'>
             <h1 className='text-center text-4xl text-white mb-20 font-semibold'> Contact Us</h1>
             <div className='flex container flex-col lg:flex-row gap-10 mx-auto items-center justify-between'>
                 <img className='lg:w-1/2 lg:mb-0 mb-12' src={ContactPic} alt="" />
