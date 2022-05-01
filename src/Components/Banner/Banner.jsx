@@ -4,7 +4,7 @@ import "./Banner.css";
 const Banner = () => {
   return (
     <div className="banner">
-      <div className="lg:pt-60 pt-24 md:w-[600px] min-w-[300px] px-8 md:px-0 mx-auto">
+      <div className="lg:pt-60 md:pt-48 pt-24 md:w-[600px] min-w-[300px] px-8 md:px-0 mx-auto">
         <h1 className="text-center md:text-5xl text-3xl font-bold text-slate-200">
           World's Biggest Laptop Stock is Here
         </h1>
