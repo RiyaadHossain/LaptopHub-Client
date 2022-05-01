@@ -63,6 +63,7 @@ const LogIn = () => {
     } else {
       toast.success("Email Sent");
       await sendPasswordResetEmail(email.value);
+      window.location.reload()
     }
   }
 
