@@ -4,14 +4,30 @@ import { useNavigate, useParams } from "react-router-dom";
 const ItemDetails = () => {
   const { id } = useParams();
   const [items, setItems] = useState([]);
+  const [isChange, setIsChange] = useState(false)
   const navigate = useNavigate();
   useEffect(() => {
     fetch(`http://localhost:4000/laptops`)
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
+
   const item = items.find((item) => item._id === id);
-  const deliveredItem = () => {};
+  const deliveredItem = () => {
+    const quantity = item.quantity - 1;
+    console.log(quantity);
+    fetch(`http://localhost:4000/laptopQuantityUpdate/${id}`, {
+      method: "PUT",
+      body: JSON.stringify({
+        quantity: quantity,
+      }),
+      headers: {
+        "Content-type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+  };
   return (
     <div className="py-16  bg-[#070707]">
       <div className="lg:flex container mx-auto">
@@ -55,10 +71,11 @@ const ItemDetails = () => {
             </div>
           </div>
         </div>
-        <div className="text-center mt-12">
+        <div className="rounded text-center border py-5 mt-12 bg-slate-300 lg:px-2 h-36">
+          <h1 className="font-semibold text-2xl mb-4 ">Update Stock</h1>
           <form>
             <input
-              className="text-gray-600 w-[200px] py-2 pl-4 rounded outline-none"
+              className="text-gray-600 border-none w-[200px] py-2 pl-4 rounded outline-none"
               type="text"
             />
             <input
@@ -69,7 +86,7 @@ const ItemDetails = () => {
           </form>
         </div>
       </div>
-      <div className="text-center">
+      <div className="text-center lg:mt-20 mt-10">
         <button
           className="font-semibold hover:bg-blue-500 hover:text-white text-black mt-6 py-2 border-2 border-blue-500 px-10 bg-gray-300"
           onClick={() => navigate("/inventory")}
