@@ -10,7 +10,7 @@ const OurClient = () => {
       <div className="container gap-11 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-[90px]">
         <div className="border relative text-center rounded-md bg-[#0e0d0d] py-6 px-2">
           <img
-            className="w-28 absolute top-[-50px] left-[140px] h-28 object-cover rounded-full mx-auto border-2 border-blue-600"
+            className="w-28 absolute top-[-50px] left-[140px] lg:left-[100px] h-28 object-cover rounded-full mx-auto border-2 border-blue-600"
             src={Client1}
             alt=""
           />
@@ -29,9 +29,9 @@ const OurClient = () => {
             </h2>
           </div>
         </div>
-        <div className="border relative text-center rounded-md bg-[#0e0d0d] py-6 px-2">
+        <div className="border  mt-12 md:mt-0 relative text-center rounded-md bg-[#0e0d0d] py-6 px-2">
           <img
-            className="w-28 absolute top-[-50px] left-[140px] h-28 object-cover rounded-full mx-auto border-2 border-blue-600"
+            className="w-28 lg:left-[100px] absolute top-[-50px] left-[140px] h-28 object-cover rounded-full mx-auto border-2 border-blue-600"
             src={Client2}
             alt=""
           />
@@ -50,9 +50,9 @@ const OurClient = () => {
             </h2>
           </div>
         </div>
-        <div className="border lg:mt-0 md:mt-12 relative text-center rounded-md bg-[#0e0d0d] py-6 px-2">
+        <div className="border mt-12 lg:mt-0 md:mt-12 relative text-center rounded-md bg-[#0e0d0d] py-6 px-2">
           <img
-            className="w-28 absolute top-[-50px] left-[140px] h-28 object-cover rounded-full mx-auto border-2 border-blue-600"
+            className="w-28 lg:left-[100px] absolute top-[-50px] left-[140px] h-28 object-cover rounded-full mx-auto border-2 border-blue-600"
             src={Client3}
             alt=""
           />
