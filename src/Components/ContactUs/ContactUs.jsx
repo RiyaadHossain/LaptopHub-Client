@@ -7,7 +7,7 @@ const ContactUs = () => {
             <h1 className='text-center text-4xl text-white mb-20 font-semibold'> Contact Us</h1>
             <div className='flex container flex-col lg:flex-row gap-10 mx-auto items-center justify-between'>
                 <img className='lg:w-1/2 lg:mb-0 mb-12' src={ContactPic} alt="" />
-                <div className='border rounded px-6 py-12'>
+                <div className='border bg-slate-900 rounded px-6 py-12'>
                     <form >
                         <input className='w-full mb-5' type="text" placeholder='Your Name' />
                         <input className='w-full mb-5' type="text" placeholder='Your Email'/>
