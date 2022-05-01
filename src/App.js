@@ -19,7 +19,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Toaster/>
+      <Toaster />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/inventory" element={<Inventory />} />
@@ -32,12 +32,40 @@ function App() {
           }
         />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/additem" element={<AddItem />} />
+        <Route
+          path="/additem"
+          element={
+            <RequireAuth>
+              <AddItem />
+            </RequireAuth>
+          }
+        />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/additem" element={<AddItem />} />
-        <Route path="/manageitems" element={<ManageItems />} />
-        <Route path="/myitems" element={<MyItems />} />
+        <Route
+          path="/additem"
+          element={
+            <RequireAuth>
+              <AddItem />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/manageitems"
+          element={
+            <RequireAuth>
+              <ManageItems />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/myitems"
+          element={
+            <RequireAuth>
+              <MyItems />
+            </RequireAuth>
+          }
+        />
       </Routes>
       <Footer />
     </div>
