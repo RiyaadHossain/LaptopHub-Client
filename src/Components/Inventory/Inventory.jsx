@@ -10,6 +10,8 @@ const Inventory = () => {
       .then((data) => setItems(data));
   }, [isChange]);
   const deleteItem = (id) => {
+    const confirm = window.confirm()
+    if(confirm){
     fetch(`http://localhost:4000/laptop/${id}`, {
       method: "DELETE",
     })
@@ -17,6 +19,7 @@ const Inventory = () => {
       .then(() => {
         setIsChange(!isChange);
       });
+    }
   };
   return (
     <div className="py-24 min-h-[80vh] bg-black">
