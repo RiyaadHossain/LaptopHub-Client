@@ -1,6 +1,10 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../Firebase/Firebase.init";
 
 const AddItem = () => {
+  const [user] = useAuthState(auth);
+
   const addLaptop = (e) => {
     e.preventDefault();
     const brandName = e.target.brandName.value;
@@ -21,6 +25,7 @@ const AddItem = () => {
         image: imageURL,
       }),
       headers: {
+        "authorization": `${user.email} ${localStorage.getItem("accessToken")}`,
         "Content-type": "application/json; charset=UTF-8",
       },
     })

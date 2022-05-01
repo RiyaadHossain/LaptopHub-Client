@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import {
+  useAuthState,
   useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
@@ -11,6 +12,7 @@ import auth from "../../../Firebase/Firebase.init";
 import Spinner from "../../Spinner/Spinner";
 
 const LogIn = () => {
+  const [authUser] = useAuthState(auth)
   const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
   const [sendPasswordResetEmail, loading] = useSendPasswordResetEmail(auth);
   let navigate = useNavigate();
@@ -80,6 +82,24 @@ const LogIn = () => {
       signInWithEmailAndPassword(email.value, password.value);
     }
   };
+
+  // For JWT Token
+  if (authUser) {
+    fetch("http://localhost:4000/login", {
+      method: 'POST',
+      body: JSON.stringify({
+          email: authUser.email
+      }),
+      headers: {
+          'Content-type': 'application/json',
+      },
+  })
+      .then((response) => response.json())
+      .then((data) => {
+          localStorage.setItem("accessToken", data.token);
+          navigate(from, { replace: true });
+      });
+  }
 
   return (
     <div className="h-[80vh] lg:h-[90vh] bg-[#060606]">

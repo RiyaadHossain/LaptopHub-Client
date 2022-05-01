@@ -19,7 +19,7 @@ const InventoryItem = () => {
           {items.slice(0,6).map((item) => (
             <div
               key={item._id}
-              className="mb-4 bg-slate-200 shadow-sky-300 shadow-lg"
+              className="mb-8 bg-slate-200 shadow-sky-300 shadow-lg"
             >
               <img
                 className="h-96 w-full object-cover"
@@ -33,14 +33,14 @@ const InventoryItem = () => {
                   {item.quantity}
                 </p>
                 <p>
-                  <span className="text-lg font-semibold ">Price:</span>
-                  {item.price}
+                  <span className="text-lg font-semibold ">Price: </span>
+                  ${item.price}
                 </p>
                 <p>
-                  <span className="text-lg font-semibold ">Supplier:</span>
+                  <span className="text-lg font-semibold ">Supplier: </span>
                   {item.supplierName}
                 </p>
-                <p className="text-xl font-thin">{item.description}</p>
+                <p className="text-lg md:text-xl font-thin">{item.description}</p>
                 <button
                   onClick={() => navigate(`/itemdetails/${item._id}`)}
                   className="py-3 px-8 bg-blue-600 text-white rounded mt-4"
