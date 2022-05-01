@@ -16,7 +16,7 @@ const InventoryItem = () => {
           Inventory Items
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 lg:gap-10">
-          {items.map((item) => (
+          {items.slice(0,6).map((item) => (
             <div
               key={item._id}
               className="mb-4 bg-slate-200 shadow-sky-300 shadow-lg"
@@ -52,6 +52,7 @@ const InventoryItem = () => {
           ))}
         </div>
       </div>
+      <div className="text-center pb-10"><button onClick={() => navigate('/inventory')} className="text-white  py-3 px-8 bg-blue-600 rounded">Manage Invetory</button></div>
     </div>
   );
 };

@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>
         <div>
           {user?.emailVerified ? (
-            <div className="flex items-center">
+            <div className="flex flex-col lg:flex-row items-center">
               <div>
                 <NavLink
                   to="/manageitems"
@@ -76,7 +76,7 @@ const Navbar = () => {
               </div>
               <button
                 onClick={logOut}
-                className="ml-5 bg-blue-500 py-[7px] shadow shadow-blue-500 px-7 rounded-md text-lg font-semibold text-white"
+                className="ml-5 lg:mt-0 mt-4 bg-blue-500 py-[7px] shadow shadow-blue-500 px-7 rounded-md text-lg font-semibold text-white"
               >
                 Log Out
               </button>
