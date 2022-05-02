@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { AiFillDelete } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 const Inventory = () => {
+  const navigate = useNavigate()
   const [items, setItems] = useState([]);
   const [isChange, setIsChange] = useState(false);
   useEffect(() => {
@@ -10,15 +12,15 @@ const Inventory = () => {
       .then((data) => setItems(data));
   }, [isChange]);
   const deleteItem = (id) => {
-    const confirm = window.confirm()
-    if(confirm){
-    fetch(`http://localhost:4000/laptop/${id}`, {
-      method: "DELETE",
-    })
-      .then((response) => response.json())
-      .then(() => {
-        setIsChange(!isChange);
-      });
+    const confirm = window.confirm();
+    if (confirm) {
+      fetch(`http://localhost:4000/laptop/${id}`, {
+        method: "DELETE",
+      })
+        .then((response) => response.json())
+        .then(() => {
+          setIsChange(!isChange);
+        });
     }
   };
   return (
@@ -73,6 +75,11 @@ const Inventory = () => {
               </tbody>
             ))}
           </table>
+        </div>
+        <div className="text-center mt-10">
+          <button onClick={() => navigate('/additem')} className="bg-blue-600 px-9 py-[12px] rounded  text-white font-semibold">
+            Add New Item
+          </button>
         </div>
       </div>
     </div>

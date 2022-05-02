@@ -14,22 +14,22 @@ const OurTeam = () => {
       </h1>
       <div className="grid grid-cols-3 md:grid-cols-6 mt-6">
         <div>
-          <img className="w-44 mx-auto" src={Microsoft} alt="" />
+          <img className="w-44 brand-logo hover:translate-y-[-10px] mx-auto" src={Microsoft} alt="" />
         </div>
         <div>
-          <img className="w-44 mx-auto" src={Google} alt="" />
+          <img className="w-44 brand-logo hover:translate-y-[-10px]  mx-auto" src={Google} alt="" />
         </div>
         <div>
-          <img className="w-44 mx-auto" src={Meta} alt="" />
+          <img className="w-44 brand-logo hover:translate-y-[-10px]  mx-auto" src={Meta} alt="" />
         </div>
         <div>
-          <img className="w-44 mx-auto" src={Motorolla} alt="" />
+          <img className="w-44 brand-logo hover:translate-y-[-10px]  mx-auto" src={Motorolla} alt="" />
         </div>
         <div>
-          <img className="w-44 mx-auto" src={Huawei} alt="" />
+          <img className="w-44 brand-logo hover:translate-y-[-10px]  mx-auto" src={Huawei} alt="" />
         </div>
         <div>
-          <img className="w-44 mx-auto" src={Lenovo} alt="" />
+          <img className="w-44 brand-logo hover:translate-y-[-10px]  mx-auto" src={Lenovo} alt="" />
         </div>
       </div>
     </div>
