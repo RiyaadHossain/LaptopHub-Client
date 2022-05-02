@@ -23,7 +23,7 @@ const ManageItems = () => {
     }
   };
   return (
-    <div className="py-16 min-h-[80vh] bg-black">
+    <div className="py-16 min-h-[80vh] bg-[#0e0e0e]">
       <div className=" container mx-auto">
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">

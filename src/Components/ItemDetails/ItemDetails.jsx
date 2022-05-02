@@ -105,7 +105,7 @@ const ItemDetails = () => {
       </div>
       <div className="text-center lg:mt-20 mt-10">
         <button
-          className="font-semibold hover:bg-blue-500 hover:text-white text-black mt-6 py-2 border-2 border-blue-500 px-10 bg-gray-300"
+          className="font-semibold hover:bg-blue-500 hover:text-white text-black mt-6 py-2 border-2 border-blue-500 px-10 bg-gray-300 "
           onClick={() => navigate("/inventory")}
         >
           Manage Inventory

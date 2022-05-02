@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
+  useAuthState,
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
@@ -8,6 +9,7 @@ import auth from "../../../Firebase/Firebase.init";
 import toast from "react-hot-toast";
 
 const SignUp = () => {
+  const [authUser] = useAuthState(auth)
   const [createUserWithEmailAndPassword, user, ,error] =
     useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
   const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
@@ -72,6 +74,25 @@ const SignUp = () => {
       await createUserWithEmailAndPassword(email.value, password.value);
     }
   };
+
+    // For JWT Token
+    if (authUser) {
+      fetch("http://localhost:4000/login", {
+        method: 'POST',
+        body: JSON.stringify({
+            email: authUser.email
+        }),
+        headers: {
+            'Content-type': 'application/json',
+        },
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            localStorage.setItem("accessToken", data.token);
+            navigate(from, { replace: true });
+        });
+    }
+
   return (
     <div className="h-[90vh] bg-[#060606]">
       <h1 className="text-3xl mb-7 pt-20 font-bold text-center text-white">

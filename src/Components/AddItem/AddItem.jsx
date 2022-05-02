@@ -1,5 +1,6 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import toast from "react-hot-toast";
 import auth from "../../Firebase/Firebase.init";
 
 const AddItem = () => {
@@ -23,14 +24,17 @@ const AddItem = () => {
         supplierName: supplierName,
         description: description,
         image: imageURL,
+        email: user.email,
       }),
       headers: {
         "authorization": `${user.email} ${localStorage.getItem("accessToken")}`,
-        "Content-type": "application/json; charset=UTF-8",
+        "Content-type": "application/json",
       },
     })
       .then((response) => response.json())
-      .then((json) => console.log(json));
+      .then((json) => {
+        toast.success("Item Added Successfully.")
+      });
   };
   return (
     <div className=" bg-[#0c0c0c] py-24">

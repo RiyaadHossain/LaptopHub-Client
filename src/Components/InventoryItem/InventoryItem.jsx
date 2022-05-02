@@ -40,7 +40,7 @@ const InventoryItem = () => {
                   <span className="text-lg font-semibold ">Supplier: </span>
                   {item.supplierName}
                 </p>
-                <p className="text-lg md:text-xl font-thin">{item.description}</p>
+                <p className="text-lg mt-3 md:text-xl font-thin">{item.description}</p>
                 <button
                   onClick={() => navigate(`/itemdetails/${item._id}`)}
                   className="py-3 px-8 bg-blue-600 text-white rounded mt-4"
@@ -52,7 +52,7 @@ const InventoryItem = () => {
           ))}
         </div>
       </div>
-      <div className="text-center pb-10"><button onClick={() => navigate('/inventory')} className="text-white  py-3 px-8 bg-blue-600 rounded">Manage Invetory</button></div>
+      <div className="text-center pb-10"><button onClick={() => navigate('/inventory')} className="text-white transition py-3 px-8 bg-blue-600 rounded">Manage Invetory</button></div>
     </div>
   );
 };
