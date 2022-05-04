@@ -1,5 +1,5 @@
 ## Laptop Hub 
-#### Live Site: [LaptopHub] (https://laptop-03.web.app/)
+#### Live Site: [LaptopHub](https://laptop-03.web.app/)
 
 ### Description: 
 <p> This is a full stack site which means both client side and server site functionalites are added in this project. In this site I build a laptop warehouse related site named "Laptop Hub". For authentication, I used Firebase Authentication and for server and Database, I used Node.js and MongoDB. After sign up or log in, a user can add new laptop item and even delete his/her item in the inventory and my items page. If user is not logged in, he/she cannot add any item. I also set a 404 page if no route is matched.</p>
