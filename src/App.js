@@ -14,6 +14,7 @@ import RequireAuth from "./Components/RequireAuth/RequireAuth";
 import ManageItems from "./Components/ManageItems/ManageItems";
 import MyItems from "./Components/MyItems/MyItems";
 import { Toaster } from "react-hot-toast";
+import NotFound from "./Components/NotFound/NotFound";
 
 function App() {
   return (
@@ -66,7 +67,9 @@ function App() {
             </RequireAuth>
           }
         />
+        <Route path="*" element={<NotFound />}/>
       </Routes>
+
       <Footer />
     </div>
   );
