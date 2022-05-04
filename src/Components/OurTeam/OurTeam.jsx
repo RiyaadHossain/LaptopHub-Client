@@ -9,7 +9,7 @@ import Huawei from "../../Logo/Huawei-logo.png";
 const OurTeam = () => {
   return (
     <div className="bg-black py-16">
-      <h1 className="text-3xl font-semibold text-center text-white">
+      <h1 className="text-4xl font-semibold text-center text-white">
         Our Team
       </h1>
       <div className="grid grid-cols-3 md:grid-cols-6 mt-6">
