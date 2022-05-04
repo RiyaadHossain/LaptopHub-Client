@@ -6,14 +6,14 @@ const ManageItems = () => {
   const [items, setItems] = useState([]);
   const [isChange, setIsChange] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:4000/laptops")
+    fetch("https://nameless-peak-52281.herokuapp.com/laptops")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, [isChange]);
   const deleteItem = (id) => {
-    const confirm = window.confirm()
+    const confirm = window.confirm();
     if (confirm) {
-      fetch(`http://localhost:4000/laptop/${id}`, {
+      fetch(`https://nameless-peak-52281.herokuapp.com/laptop/${id}`, {
         method: "DELETE",
       })
         .then((response) => response.json())

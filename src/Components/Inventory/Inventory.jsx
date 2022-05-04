@@ -3,18 +3,18 @@ import { AiFillDelete } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 
 const Inventory = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [items, setItems] = useState([]);
   const [isChange, setIsChange] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:4000/laptops")
+    fetch("https://nameless-peak-52281.herokuapp.com/laptops")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, [isChange]);
   const deleteItem = (id) => {
     const confirm = window.confirm();
     if (confirm) {
-      fetch(`http://localhost:4000/laptop/${id}`, {
+      fetch(`https://nameless-peak-52281.herokuapp.com/laptop/${id}`, {
         method: "DELETE",
       })
         .then((response) => response.json())
@@ -77,7 +77,10 @@ const Inventory = () => {
           </table>
         </div>
         <div className="text-center mt-10">
-          <button onClick={() => navigate('/additem')} className="bg-blue-600 px-9 py-[12px] rounded  text-white font-semibold">
+          <button
+            onClick={() => navigate("/additem")}
+            className="bg-blue-600 px-9 py-[12px] rounded  text-white font-semibold"
+          >
             Add New Item
           </button>
         </div>

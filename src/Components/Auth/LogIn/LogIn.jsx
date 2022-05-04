@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import {
   useAuthState,
@@ -12,13 +11,13 @@ import auth from "../../../Firebase/Firebase.init";
 import Spinner from "../../Spinner/Spinner";
 
 const LogIn = () => {
-  const [authUser] = useAuthState(auth)
+  const [authUser] = useAuthState(auth);
   const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
   const [sendPasswordResetEmail, loading] = useSendPasswordResetEmail(auth);
   let navigate = useNavigate();
   let location = useLocation();
   let from = location.state?.from?.pathname || "/";
-  
+
   const [email, setEmail] = useState({ value: "", error: "" });
   const [password, setPassword] = useState({ value: "", error: "" });
   const [errorMsg, setMsgError] = useState();
@@ -55,7 +54,7 @@ const LogIn = () => {
   }, [user, googleUser, error, loading, from, navigate]);
 
   //Function: Reset Password
-  const resetPass = async() => {
+  const resetPass = async () => {
     if (email.value === "") {
       setEmail({
         value: "",
@@ -65,9 +64,9 @@ const LogIn = () => {
     } else {
       toast.success("Email Sent");
       await sendPasswordResetEmail(email.value);
-      window.location.reload()
+      window.location.reload();
     }
-  }
+  };
 
   // Form Submit Function
   const onFormSubmit = (e) => {
@@ -85,19 +84,19 @@ const LogIn = () => {
 
   // For JWT Token
   if (authUser) {
-    fetch("http://localhost:4000/login", {
-      method: 'POST',
+    fetch("https://nameless-peak-52281.herokuapp.com/login", {
+      method: "POST",
       body: JSON.stringify({
-          email: authUser.email
+        email: authUser.email,
       }),
       headers: {
-          'Content-type': 'application/json',
+        "Content-type": "application/json",
       },
-  })
+    })
       .then((response) => response.json())
       .then((data) => {
-          localStorage.setItem("accessToken", data.token);
-          navigate(from, { replace: true });
+        localStorage.setItem("accessToken", data.token);
+        navigate(from, { replace: true });
       });
   }
 
@@ -134,10 +133,7 @@ const LogIn = () => {
         </form>
         {errorMsg && <p className="text-red-600 mt-4">{errorMsg}</p>}
         <div className="flex justify-between mt-2">
-          <button
-            onClick={resetPass}
-            className="text-right text-blue-600"
-          >
+          <button onClick={resetPass} className="text-right text-blue-600">
             Reset Password
           </button>
           <button

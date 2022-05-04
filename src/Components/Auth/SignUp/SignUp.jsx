@@ -9,9 +9,9 @@ import auth from "../../../Firebase/Firebase.init";
 import toast from "react-hot-toast";
 
 const SignUp = () => {
-  const [authUser] = useAuthState(auth)
-  const [createUserWithEmailAndPassword, user, ,error] =
-    useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+  const [authUser] = useAuthState(auth);
+  const [createUserWithEmailAndPassword, user, , error] =
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
   let navigate = useNavigate();
   let location = useLocation();
@@ -50,16 +50,15 @@ const SignUp = () => {
   useEffect(() => {
     if (user || googleUser) {
       navigate(from, { replace: true });
-      
     }
     if (error) {
-      toast.error("An Error Occurred")
+      toast.error("An Error Occurred");
     }
-  }, [user, googleUser, error, navigate, from ])
+  }, [user, googleUser, error, navigate, from]);
 
   // Function: Form Submit
   const onFormSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (email.value === "") {
       setEmail({ value: "", error: "Email is Required" });
     }
@@ -70,28 +69,28 @@ const SignUp = () => {
       setPassword({ value: "", error: "Confirm Password is Required" });
     }
     if (email.value && password.value === confirmPassword.value) {
-      toast.success("Varification Mail Sent")
+      toast.success("Varification Mail Sent");
       await createUserWithEmailAndPassword(email.value, password.value);
     }
   };
 
-    // For JWT Token
-    if (authUser) {
-      fetch("http://localhost:4000/login", {
-        method: 'POST',
-        body: JSON.stringify({
-            email: authUser.email
-        }),
-        headers: {
-            'Content-type': 'application/json',
-        },
+  // For JWT Token
+  if (authUser) {
+    fetch("https://nameless-peak-52281.herokuapp.com/login", {
+      method: "POST",
+      body: JSON.stringify({
+        email: authUser.email,
+      }),
+      headers: {
+        "Content-type": "application/json",
+      },
     })
-        .then((response) => response.json())
-        .then((data) => {
-            localStorage.setItem("accessToken", data.token);
-            navigate(from, { replace: true });
-        });
-    }
+      .then((response) => response.json())
+      .then((data) => {
+        localStorage.setItem("accessToken", data.token);
+        navigate(from, { replace: true });
+      });
+  }
 
   return (
     <div className="h-[90vh] bg-[#060606]">

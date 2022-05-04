@@ -4,10 +4,10 @@ import { useNavigate, useParams } from "react-router-dom";
 const ItemDetails = () => {
   const { id } = useParams();
   const [items, setItems] = useState([]);
-  const [isChange, setIsChange] = useState(false)
+  const [isChange, setIsChange] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
-    fetch(`http://localhost:4000/laptops`)
+    fetch(`https://nameless-peak-52281.herokuapp.com/laptops`)
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, [isChange]);
@@ -15,35 +15,42 @@ const ItemDetails = () => {
   const item = items.find((item) => item._id === id);
   const deliveredItem = () => {
     const quantity = item.quantity - 1;
-    fetch(`http://localhost:4000/laptopQuantityUpdate/${id}`, {
-      method: "PUT",
-      body: JSON.stringify({
-        quantity: quantity,
-      }),
-      headers: {
-        "Content-type": "application/json",
-      },
-    })
-    .then((response) => response.json())
-    .then((json) => setIsChange(!isChange));
-  };
-
-  const updateStock = e => {
-    e.preventDefault()
-    const quantity = parseInt(e.target.quantity.value) + parseInt(item.quantity)
-    e.target.reset()
-    fetch(`http://localhost:4000/laptopQuantityUpdate/${id}`, {
-      method: "PUT",
-      body: JSON.stringify({
-        quantity: quantity,
-      }),
-      headers: {
-        "Content-type": "application/json",
-      },
-    })
+    fetch(
+      `https://nameless-peak-52281.herokuapp.com/laptopQuantityUpdate/${id}`,
+      {
+        method: "PUT",
+        body: JSON.stringify({
+          quantity: quantity,
+        }),
+        headers: {
+          "Content-type": "application/json",
+        },
+      }
+    )
       .then((response) => response.json())
       .then((json) => setIsChange(!isChange));
-  }
+  };
+
+  const updateStock = (e) => {
+    e.preventDefault();
+    const quantity =
+      parseInt(e.target.quantity.value) + parseInt(item.quantity);
+    e.target.reset();
+    fetch(
+      `https://nameless-peak-52281.herokuapp.com/laptopQuantityUpdate/${id}`,
+      {
+        method: "PUT",
+        body: JSON.stringify({
+          quantity: quantity,
+        }),
+        headers: {
+          "Content-type": "application/json",
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((json) => setIsChange(!isChange));
+  };
   return (
     <div className="py-16  bg-[#070707]">
       <div className="lg:flex container mx-auto">

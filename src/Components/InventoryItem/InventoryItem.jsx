@@ -5,7 +5,7 @@ const InventoryItem = () => {
   const [items, setItems] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("http://localhost:4000/laptops")
+    fetch("https://nameless-peak-52281.herokuapp.com/laptops")
       .then((res) => res.json())
       .then((json) => setItems(json));
   }, [setItems]);
@@ -16,7 +16,7 @@ const InventoryItem = () => {
           Inventory Items
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 lg:gap-10">
-          {items.slice(0,6).map((item) => (
+          {items.slice(0, 6).map((item) => (
             <div
               key={item._id}
               className="mb-8 bg-slate-200 shadow-sky-300 shadow-lg"
@@ -33,14 +33,16 @@ const InventoryItem = () => {
                   {item.quantity}
                 </p>
                 <p>
-                  <span className="text-lg font-semibold ">Price: </span>
-                  ${item.price}
+                  <span className="text-lg font-semibold ">Price: </span>$
+                  {item.price}
                 </p>
                 <p>
                   <span className="text-lg font-semibold ">Supplier: </span>
                   {item.supplierName}
                 </p>
-                <p className="text-lg mt-3 md:text-xl font-thin">{item.description}</p>
+                <p className="text-lg mt-3 md:text-xl font-thin">
+                  {item.description}
+                </p>
                 <button
                   onClick={() => navigate(`/itemdetails/${item._id}`)}
                   className="py-3 px-8 bg-blue-600 text-white rounded mt-4"
@@ -52,7 +54,14 @@ const InventoryItem = () => {
           ))}
         </div>
       </div>
-      <div className="text-center pb-10"><button onClick={() => navigate('/inventory')} className="text-white transition py-3 px-8 bg-blue-600 rounded">Manage Invetory</button></div>
+      <div className="text-center pb-10">
+        <button
+          onClick={() => navigate("/inventory")}
+          className="text-white transition py-3 px-8 bg-blue-600 rounded"
+        >
+          Manage Invetory
+        </button>
+      </div>
     </div>
   );
 };

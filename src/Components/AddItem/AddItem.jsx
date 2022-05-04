@@ -15,7 +15,7 @@ const AddItem = () => {
     const description = e.target.description.value;
     const imageURL = e.target.image.value;
     e.target.reset();
-    fetch("http://localhost:4000/laptop", {
+    fetch("https://nameless-peak-52281.herokuapp.com/laptop", {
       method: "POST",
       body: JSON.stringify({
         name: brandName,
@@ -27,13 +27,13 @@ const AddItem = () => {
         email: user.email,
       }),
       headers: {
-        "authorization": `${user.email} ${localStorage.getItem("accessToken")}`,
+        authorization: `${user.email} ${localStorage.getItem("accessToken")}`,
         "Content-type": "application/json",
       },
     })
       .then((response) => response.json())
       .then((json) => {
-        toast.success("Item Added Successfully.")
+        toast.success("Item Added Successfully.");
       });
   };
   return (

@@ -10,7 +10,7 @@ const MyItems = () => {
   const deleteItem = (id) => {
     const confirm = window.confirm();
     if (confirm) {
-      fetch(`http://localhost:4000/laptop/${id}`, {
+      fetch(`https://nameless-peak-52281.herokuapp.com/laptop/${id}`, {
         method: "DELETE",
       })
         .then((response) => response.json())
@@ -20,7 +20,7 @@ const MyItems = () => {
     }
   };
   useEffect(() => {
-    fetch("http://localhost:4000/myitems", {
+    fetch("https://nameless-peak-52281.herokuapp.com/myitems", {
       headers: {
         authorization: `${user.email} ${localStorage.getItem("accessToken")}`,
       },
@@ -63,7 +63,11 @@ const MyItems = () => {
                     scope="row"
                     class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
                   >
-                    <img  className="md:w-20 border-2 border-blue-500 md:h-20 w-10 h-10 rounded-full object-cover" src={item.image} alt="" />
+                    <img
+                      className="md:w-20 border-2 border-blue-500 md:h-20 w-10 h-10 rounded-full object-cover"
+                      src={item.image}
+                      alt=""
+                    />
                   </th>
                   <td class="px-6 py-4">{item.name}</td>
                   <td class="px-6 py-4">{item.quantity}</td>
