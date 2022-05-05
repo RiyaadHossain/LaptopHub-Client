@@ -105,7 +105,7 @@ const LogIn = () => {
       <h1 className="text-3xl mb-7 pt-16 font-bold text-center text-white">
         Log In
       </h1>
-      <div className="bg-slate-200 w-[500px] mx-auto py-12 px-3 rounded">
+      <div className="bg-slate-200 max-w-[500px] mx-auto py-12 px-3 rounded">
         <form onSubmit={onFormSubmit}>
           <input
             onBlur={onEmailBlur}
@@ -147,7 +147,7 @@ const LogIn = () => {
       <div className="text-center">
         <button
           onClick={() => signInWithGoogle()}
-          className="bg-slate-200 border-[3px] border-blue-500 mt-10 text-center w-[500px] mx-auto rounded"
+          className="bg-slate-200 border-[3px] border-blue-500 mt-10 text-center w-[300px] md:w-[500px] mx-auto rounded"
         >
           <h2 className="py-3 text-2xl font-semibold pl-3">
             Continue with <span className="text-blue-500"> G</span>

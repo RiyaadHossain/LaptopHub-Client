@@ -97,7 +97,7 @@ const SignUp = () => {
       <h1 className="text-3xl mb-7 pt-20 font-bold text-center text-white">
         Sign Up
       </h1>
-      <div className="bg-slate-200 max-w-[500px] mx-auto py-12 px-3 rounded">
+      <div className="bg-slate-200 md:max-w-[500px] mx-auto py-12 px-3 rounded">
         <form onSubmit={onFormSubmit}>
           <input
             className="block outline-none mb-4 py-3 w-full pl-3"
@@ -134,7 +134,7 @@ const SignUp = () => {
             <p className="text-red-600">⚠️ {confirmPassword.error}</p>
           )}
           <input
-            className="bg-blue-500 py-2 mt-4 px-8 rounded text-slate-100"
+            className="bg-blue-500 py-2 mt-4 px-6 md:px-8 rounded text-slate-100"
             type="submit"
             value="Sign Up"
           />
@@ -149,7 +149,7 @@ const SignUp = () => {
       <div className="text-center">
         <button
           onClick={() => signInWithGoogle()}
-          className="bg-slate-200 border-[3px] border-blue-500 mt-10 text-center max-w-[500px] mx-auto rounded"
+          className="bg-slate-200 border-[3px] border-blue-500 mt-10 text-center w-[300px] md:max-w-[500px] mx-auto rounded"
         >
           <h2 className="py-3 text-2xl font-semibold pl-6">
             Continue with <span className="text-blue-500"> G</span>
