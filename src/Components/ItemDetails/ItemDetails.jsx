@@ -15,12 +15,14 @@ const ItemDetails = () => {
   const item = items.find((item) => item._id === id);
   const deliveredItem = () => {
     const quantity = item.quantity - 1;
+    const sold = item.sold -1
     fetch(
       `https://nameless-peak-52281.herokuapp.com/laptopQuantityUpdate/${id}`,
       {
         method: "PUT",
         body: JSON.stringify({
           quantity: quantity,
+          sold: sold,
         }),
         headers: {
           "Content-type": "application/json",
@@ -33,23 +35,30 @@ const ItemDetails = () => {
 
   const updateStock = (e) => {
     e.preventDefault();
+    const sold = item.sold
+    const number = e.target.quantity.value
     const quantity =
-      parseInt(e.target.quantity.value) + parseInt(item.quantity);
+      parseInt(number) + parseInt(item.quantity);
     e.target.reset();
-    fetch(
-      `https://nameless-peak-52281.herokuapp.com/laptopQuantityUpdate/${id}`,
-      {
-        method: "PUT",
-        body: JSON.stringify({
-          quantity: quantity,
-        }),
-        headers: {
-          "Content-type": "application/json",
-        },
-      }
-    )
-      .then((response) => response.json())
-      .then((json) => setIsChange(!isChange));
+    if (typeof(parseInt(number)) === "number" && number >= 1) {
+      fetch(
+        `https://nameless-peak-52281.herokuapp.com/laptopQuantityUpdate/${id}`,
+        {
+          method: "PUT",
+          body: JSON.stringify({
+            quantity: quantity,
+            sold : sold,
+          }),
+          headers: {
+            "Content-type": "application/json",
+          },
+        }
+      )
+        .then((response) => response.json())
+        .then((json) => setIsChange(!isChange));
+    } else {
+      alert("Please Enter a positive number to update stock 😔")
+    }
   };
   return (
     <div className="py-16  bg-[#070707]">
@@ -75,6 +84,10 @@ const ItemDetails = () => {
             <p className="text-white text-lg mb-5">
               <span className="font-bold text-blue-600">Quantity: </span>
               {item?.quantity}
+            </p>
+            <p className="text-white text-lg mb-5">
+              <span className="font-bold text-blue-600">Sold: </span>
+              {item?.sold}
             </p>
             <p className="text-white text-lg mb-5">
               <span className="font-bold text-blue-600">Supplier Name: </span>
