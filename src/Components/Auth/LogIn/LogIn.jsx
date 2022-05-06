@@ -46,10 +46,9 @@ const LogIn = () => {
     if (loading) {
       return <Spinner />;
     }
+
     if (error) {
-      if (error) {
-        // toast.error("Email and Password didn't match", {id: 'test'});
-      }
+      toast.error("Email and Password didn't match", { id: "test" });
     }
   }, [user, googleUser, error, loading, from, navigate]);
 

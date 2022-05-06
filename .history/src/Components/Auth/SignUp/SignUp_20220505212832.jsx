@@ -149,7 +149,7 @@ const SignUp = () => {
       <div className="text-center">
         <button
           onClick={() => signInWithGoogle()}
-          className="bg-slate-200 border-[3px] border-blue-500 mt-10 text-center w-[300px] md:w-[500px] mx-auto rounded"
+          className="bg-slate-200 border-[3px] border-blue-500 mt-10 text-center w-[300px] md:max-w-[500px] mx-auto rounded"
         >
           <h2 className="py-3 text-2xl font-semibold pl-6">
             Continue with <span className="text-blue-500"> G</span>
