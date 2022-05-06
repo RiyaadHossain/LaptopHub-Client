@@ -48,7 +48,7 @@ const LogIn = () => {
     }
 
     if (error) {
-      setMsgError("Email or Password didn't match ");
+      toast.error("Email and Password didn't match", { id: "test" });
     }
   }, [user, googleUser, error, loading, from, navigate]);
 

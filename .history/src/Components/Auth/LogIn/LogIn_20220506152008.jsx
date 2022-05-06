@@ -41,7 +41,7 @@ const LogIn = () => {
     if (user || googleUser) {
       navigate(from, { replace: true });
       toast.success("Logged In");
-      setMsgError("");
+      
     }
     if (loading) {
       return <Spinner />;

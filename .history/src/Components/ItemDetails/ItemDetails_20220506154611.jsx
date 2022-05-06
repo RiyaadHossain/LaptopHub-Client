@@ -13,10 +13,9 @@ const ItemDetails = () => {
   }, [isChange]);
 
   const item = items.find((item) => item._id === id);
-  console.log(item?.sold);
   const deliveredItem = () => {
     const quantity = item.quantity - 1;
-    const sold = item.sold + 1
+    const sold = item.sold - 1
     fetch(
       `https://nameless-peak-52281.herokuapp.com/laptopQuantityUpdate/${id}`,
       {
@@ -36,7 +35,7 @@ const ItemDetails = () => {
 
   const updateStock = (e) => {
     e.preventDefault();
-    const sold = item?.sold
+    const sold = item.sold
     const number = e.target.quantity.value
     const quantity =
       parseInt(number) + parseInt(item.quantity);

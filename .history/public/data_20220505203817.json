@@ -5,7 +5,6 @@
     "description": "Apple Inc. is an American multinational technology company that specializes in consumer electronics, software and online services. Apple is the largest information technology company",
     "price": 210,
     "quantity": 200,
-    "sold": 43,
     "supplierName": "Justin Trudo"
   },
   {
@@ -14,7 +13,6 @@
     "description": "Asus is the world's 5th-largest PC vendor by unit sales as of January 2021.[5] Asus appears in BusinessWeek's InfoTech 100 and Asia's Top 10 IT Companies rankings",
     "price": 210,
     "quantity": 100,
-    "sold": 31,
     "supplierName": "Emmanuel Macron"
   },
   {
@@ -23,7 +21,6 @@
     "description": "The Hewlett-Packard Company, commonly shortened to Hewlett-Packard or HP, was an American multinational information technology company headquartered in Palo Alto, California.",
     "price": 210,
     "quantity": 150,
-    "sold": 23,
     "supplierName": "Angela Dorothea"
   },
   {
@@ -32,7 +29,6 @@
     "description": "Huawei Technologies Co. Ltd. is a Chinese multinational technology corporation headquartered in China. It designs and develops telecommunications equipment, consumer electronics and various smart devices.",
     "price": 210,
     "quantity": 120,
-    "sold": 86,
     "supplierName": "Xi Jinping"
   },
   {
@@ -41,7 +37,6 @@
     "description": "Lenovo Group Limited, often shortened to Lenovo , is a Chinese technology company specializing in designing and manufacturing personal computers, software, business solutions, and related services",
     "price": 210,
     "quantity": 200,
-    "sold": 76,
     "supplierName": "Joe Biden"
   },
   {
@@ -50,7 +45,6 @@
     "description": "Acer Inc. is a Taiwanese multinational hardware and electronics corporation specializing in advanced electronics technology, headquartered in New Taipei City. Its products include desktop PCs, laptop PCs and tablets",
     "price": 250,
     "quantity": 250,
-    "sold": 76,
     "supplierName": "Jhon Boris"
   }
 ]

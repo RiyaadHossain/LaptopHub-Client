@@ -41,7 +41,7 @@ const LogIn = () => {
     if (user || googleUser) {
       navigate(from, { replace: true });
       toast.success("Logged In");
-      setMsgError("");
+      setMsgError("Email or Password didn't match ");
     }
     if (loading) {
       return <Spinner />;

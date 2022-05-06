@@ -106,6 +106,7 @@ const LogIn = () => {
       </h1>
       <div className="bg-slate-200 max-w-[500px] mx-auto py-12 px-3 rounded">
         <form onSubmit={onFormSubmit}>
+          {errorMsg && }
           <input
             onBlur={onEmailBlur}
             className="block outline-none mt-4 py-3 w-full pl-3"

@@ -36,7 +36,7 @@ const ItemDetails = () => {
 
   const updateStock = (e) => {
     e.preventDefault();
-    const sold = item?.sold
+    const sold = item.sold
     const number = e.target.quantity.value
     const quantity =
       parseInt(number) + parseInt(item.quantity);

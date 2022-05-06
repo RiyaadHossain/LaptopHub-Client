@@ -32,7 +32,7 @@
     "description": "Huawei Technologies Co. Ltd. is a Chinese multinational technology corporation headquartered in China. It designs and develops telecommunications equipment, consumer electronics and various smart devices.",
     "price": 210,
     "quantity": 120,
-    "sold": 86,
+    "sold": 23,
     "supplierName": "Xi Jinping"
   },
   {
@@ -41,7 +41,7 @@
     "description": "Lenovo Group Limited, often shortened to Lenovo , is a Chinese technology company specializing in designing and manufacturing personal computers, software, business solutions, and related services",
     "price": 210,
     "quantity": 200,
-    "sold": 76,
+    "sold": 23,
     "supplierName": "Joe Biden"
   },
   {
@@ -50,7 +50,7 @@
     "description": "Acer Inc. is a Taiwanese multinational hardware and electronics corporation specializing in advanced electronics technology, headquartered in New Taipei City. Its products include desktop PCs, laptop PCs and tablets",
     "price": 250,
     "quantity": 250,
-    "sold": 76,
+    "sold": 23,
     "supplierName": "Jhon Boris"
   }
 ]
