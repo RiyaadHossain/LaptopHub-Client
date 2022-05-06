@@ -35,7 +35,7 @@ const AddItem = () => {
       .then((json) => {
         toast.success("Item Added Successfully.");
       });
-    fetch("https://nameless-peak-52281.herokuapp.com/laptop", {
+    fetch("https://nameless-peak-52281.herokuapp.com//laptop", {
       method: "POST",
       body: JSON.stringify({
         name: brandName,

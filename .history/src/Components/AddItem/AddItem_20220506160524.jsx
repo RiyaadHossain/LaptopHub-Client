@@ -52,7 +52,7 @@ const AddItem = () => {
     })
       .then((response) => response.json())
       .then((json) => {
-        // toast.success("Item Added Successfully.");
+        toast.success("Item Added Successfully.");
       });
   };
   return (
